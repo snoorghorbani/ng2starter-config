@@ -1,5 +1,5 @@
 {
-  "name": "@ng2-starter/config",
+  "name": "@soushians/config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -35,6 +35,10 @@
   "devDependencies": {
     "typescript": "^2.7.1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/snoorghorbani/ng2starter-config.git"
+	},
+	"author": "soushians noorghorbani <snoorghorbani@gmail.com>",
+	"license": "MIT"
 }
