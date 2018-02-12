@@ -1,6 +1,6 @@
 {
   "name": "@soushians/config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "typings": [
@@ -36,9 +36,9 @@
     "typescript": "^2.7.1"
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/snoorghorbani/ng2starter-config.git"
-	},
-	"author": "soushians noorghorbani <snoorghorbani@gmail.com>",
-	"license": "MIT"
+    "type": "git",
+    "url": "https://github.com/snoorghorbani/ng2starter-config.git"
+  },
+  "author": "soushians noorghorbani <snoorghorbani@gmail.com>",
+  "license": "MIT"
 }
