@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpRequestBaseModel } from "@ng2-starter/shared";
+import { HttpRequestBaseModel } from "@soushians/shared";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { ConfigModel } from "./config.model";
 

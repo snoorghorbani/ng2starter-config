@@ -5,7 +5,7 @@ import { Store } from "@ngrx/store";
 
 import { EditConfigApiModel } from "../../models";
 import { ConfigService } from "../../services";
-import { UtilityService } from "@ng2-starter/infra";
+import { UtilityService } from "@soushians/infra";
 
 @Component({
 	selector: "config-user-module-config",

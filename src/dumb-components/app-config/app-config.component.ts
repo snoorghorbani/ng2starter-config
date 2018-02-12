@@ -3,7 +3,7 @@ import { FormGroup, Validators, FormControl } from "@angular/forms";
 import { EditConfigApiModel } from "../../models";
 import { ConfigService } from '../../services';
 import { ActivatedRoute } from '@angular/router';
-import { UtilityService } from "@ng2-starter/infra";
+import { UtilityService } from "@soushians/infra";
 import { Store } from '@ngrx/store';
 
 @Component({

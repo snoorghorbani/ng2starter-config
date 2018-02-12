@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 import { EditConfigApiModel, PartialConfig } from '../../models';
-import { UtilityService } from '@ng2-starter/infra';
+import { UtilityService } from '@soushians/infra';
 import { ConfigService } from '../../services';
 
 @Component({
