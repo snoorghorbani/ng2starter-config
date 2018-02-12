@@ -1,0 +1,11 @@
+<div [formGroup]="formGroup.controls.endpoints">
+    <mat-form-field>
+        <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="sign in" formControlName="signIn">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="sign out" formControlName="signOut">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="user information" formControlName="userInformation">
+    </mat-form-field>
+</div>

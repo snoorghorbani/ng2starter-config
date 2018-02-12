@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+	  "noImplicitAny": true,
+	  "module": "commonjs",
+	  "target": "ES6",
+	  "emitDecoratorMetadata": true,
+	  "experimentalDecorators": true,
+	  "sourceMap": true,
+		"outDir": "../lib",
+	  "declaration": true
+	},
+	"lib": ["es2017", "dom"],
+	"files": [
+	  "config.module.ts"
+	],
+	"exclude": [
+	  "node_modules"
+	],
+	"typeRoots": [
+		"node_modules/@types"
+  ],
+	"paths": {
+		"models": [
+			"models/index"
+		],
+		"environments/*": [
+			"src/environments/*"
+		]
+	}
+}

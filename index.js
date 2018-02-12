@@ -1,0 +1,1 @@
+exports.InfraModule = require("./lib/config.module");
