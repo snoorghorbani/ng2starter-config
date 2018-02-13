@@ -1,3 +1,3 @@
-exports.InfraModule =   require("./lib/config.module");
-exports.reducers    =   require("./lib/reducers");
-exports.services    =   require("./lib/services");
+exports.ConfigModule     =   require("./lib/config.module").ConfigModule;
+exports.reducers         =   require("./lib/reducers");
+exports.ConfigService    =   require("./lib/services").ConfigService;
