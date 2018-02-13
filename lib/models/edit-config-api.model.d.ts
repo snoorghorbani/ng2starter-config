@@ -1,4 +1,4 @@
-import { HttpRequestBaseModel } from "@ng2-starter/shared";
+import { HttpRequestBaseModel } from "@soushians/shared";
 import { FormGroup } from "@angular/forms";
 import { ConfigModel } from "../models";
 export declare module EditConfigApiModel {

@@ -1,4 +1,4 @@
-import { HttpRequestBaseModel } from "@ng2-starter/shared";
+import { HttpRequestBaseModel } from "@soushians/shared";
 import { ConfigModel } from "./config.model";
 export declare module GetConfigsApiModel {
     class Request implements HttpRequestBaseModel<Request> {
