@@ -42,10 +42,12 @@
     "@angular/service-worker": "^5.x.x"
   },
   "devDependencies": {
-    "@types/node": "^9.4.6",
-    "gulp": "^3.9.1",
-    "gulp-copy": "^0.4.0",
-    "gulp-inline-ng2-template": "^4.1.0",
+    "@types/node": "^9.4.x",
+    "gulp": "^4.x.x",
+    "gulp-copy": "^1.x.x",
+    "gulp-inline-ng2-template": "^4.1.x",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.55.x",
     "typescript": "^2.5.x"
   },
   "repository": {
