@@ -1,10 +1,10 @@
 {
   "name": "@soushians/config",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "",
   "main": "lib/index.js",
   "typings": [
-    "./index.d.ts"
+    "./lib/index.d.ts"
   ],
   "scripts": {
     "prepublish": "npm run build",
