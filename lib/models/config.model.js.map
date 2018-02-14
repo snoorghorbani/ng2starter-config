@@ -1,1 +1,1 @@
-{"version":3,"file":"config.model.js","sourceRoot":"","sources":["../../src/models/config.model.ts"],"names":[],"mappings":";;AAAA,IAAA;;;sBAAA;IAIC,CAAA;AAJY,kCAAW"}
+{"version":3,"file":"config.model.js","sourceRoot":"","sources":["../../dist/models/config.model.ts"],"names":[],"mappings":";;AAAA,IAAA;;;sBAAA;IAIC,CAAA;AAJY,kCAAW"}

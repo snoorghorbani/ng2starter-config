@@ -8,6 +8,7 @@ Thumbs.db
 
 # Ignored folders
 src
+dist
 
 # Ignored files
 *.ts

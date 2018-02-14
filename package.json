@@ -1,18 +1,18 @@
 {
   "name": "@soushians/config",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "typings": [
     "./index.d.ts"
   ],
   "scripts": {
-    "prepublish": "tsc -p src",
+    "prepublish": "npm run build",
     "watch": "tsc -p src -w",
-    "transpile": "ngc -p src",
+    "transpile": "ngc -p dist",
     "package": "rollup -c",
     "minify": "uglifyjs lib/bundles.umd.js --screw-ie8 --compress --mangle --comments --output lib/bundles.umd.min.js",
-    "build": "npm run transpile && npm run package && npm run minify"
+    "build": "gulp &&  npm run transpile && npm run package && npm run minify"
   },
   "dependencies": {
     "@soushians/infra": "^1.x.x",
@@ -42,6 +42,8 @@
   },
   "devDependencies": {
     "@types/node": "^9.4.6",
+    "gulp": "^3.9.1",
+    "gulp-copy": "^1.1.0",
     "gulp-inline-ng2-template": "^4.1.0",
     "typescript": "^2.7.1"
   },
