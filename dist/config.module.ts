@@ -1,10 +1,11 @@
 import { NgModule } from "@angular/core";
-import { StoreModule, Store } from "@ngrx/store";
+import { StoreModule } from "@ngrx/store";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
 	MatIconModule,
 	MatButtonModule,
@@ -22,7 +23,6 @@ import {
 	MatDatepickerModule,
 	MatProgressBarModule
 } from "@angular/material";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ConfigReducers } from "./reducers";
 import {

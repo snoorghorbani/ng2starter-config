@@ -13,3 +13,6 @@ dist
 # Ignored files
 *.ts
 !*.d.ts
+rollup.config.js
+gulpfile.js
+npm-debug.log*
