@@ -13,9 +13,10 @@
 		"typeRoots": ["node_modules/@types"],
 		"types": ["node"],
 		"lib": ["es2015", "dom"],
+		"skipLibCheck": true
 	},
 	"include": [
-	  "config.module.ts"
+	  "index.ts"
 	],
 	"exclude": [
 	  "node_modules"

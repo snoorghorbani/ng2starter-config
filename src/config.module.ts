@@ -22,7 +22,6 @@ import {
 	MatDatepickerModule,
 	MatProgressBarModule
 } from "@angular/material";
-import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ConfigReducers } from "./reducers";
@@ -70,7 +69,6 @@ import { LoadConfigEffects } from "./effects";
 		MatToolbarModule,
 		MatDatepickerModule,
 		MatProgressBarModule,
-		BrowserModule,
 		StoreModule.forFeature("config", ConfigReducers),
 		BrowserAnimationsModule,
 		RoutingModule,
@@ -87,6 +85,15 @@ import { LoadConfigEffects } from "./effects";
 		DynamicConfigComponentSelectorComponent
 	],
 	providers: [ ConfigService ],
-	exports: []
+	exports: [
+		ConfigsComponent,
+		ConfigEditComponent,
+		ConfigAppConfigComponent,
+		UserModuleConfigComponent,
+		LayoutModuleConfigComponent,
+		ConfigModuleContainerComponent,
+		AuthenticationModuleConfigComponent,
+		DynamicConfigComponentSelectorComponent
+	]
 })
 export class ConfigModule {}

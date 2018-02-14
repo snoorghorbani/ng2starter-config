@@ -8,11 +8,22 @@
   ],
   "scripts": {
     "prepublish": "tsc -p src",
-    "watch": "tsc -p src -w"
+    "watch": "tsc -p src -w",
+    "transpile": "ngc -p src",
+    "package": "rollup -c",
+    "minify": "uglifyjs lib/bundles.umd.js --screw-ie8 --compress --mangle --comments --output lib/bundles.umd.min.js",
+    "build": "npm run transpile && npm run package && npm run minify"
   },
   "dependencies": {
     "@soushians/infra": "^1.x.x",
     "@soushians/shared": "^1.x.x",
+    "@ngrx/effects": "^4.x.x",
+    "@ngrx/router-store": "^4.x.x",
+    "@ngrx/store": "^4.x.x",
+    "@ngrx/store-devtools": "^4.x.x",
+    "rxjs": "^5.x.x"
+  },
+  "peerDependencies": {
     "@angular/animations": "^5.x.x",
     "@angular/cdk": "^5.x.x",
     "@angular/common": "^5.x.x",
@@ -27,15 +38,11 @@
     "@angular/platform-browser": "^5.x.x",
     "@angular/platform-browser-dynamic": "^5.x.x",
     "@angular/router": "^5.x.x",
-    "@angular/service-worker": "^5.x.x",
-    "@ngrx/effects": "^4.x.x",
-    "@ngrx/router-store": "^4.x.x",
-    "@ngrx/store": "^4.x.x",
-    "@ngrx/store-devtools": "^4.x.x",
-    "rxjs": "^5.x.x"
+    "@angular/service-worker": "^5.x.x"
   },
   "devDependencies": {
     "@types/node": "^9.4.6",
+    "gulp-inline-ng2-template": "^4.1.0",
     "typescript": "^2.7.1"
   },
   "repository": {
