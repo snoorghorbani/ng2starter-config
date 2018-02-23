@@ -29,9 +29,12 @@ export class ConfigService {
 	}
 
 	getConfigs(): Observable<ConfigModel<any>[]> {
+		const configsEndpoint = this.configurationService.config.env.production
+			? this.configurationService.config.prod_api_host
+			: this.configurationService.config.dev_api_host;
 		return (
 			this.http
-				.get(`${this.configurationService.config.prod_api_host}/api/config`)
+				.get(`${configsEndpoint}/api/config`)
 				// .filter(() => this.configurationService.config.dev_api_host != undefined)
 				.take(1)
 				.map((response: GetConfigsApiModel.Response) => {

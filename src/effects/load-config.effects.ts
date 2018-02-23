@@ -20,7 +20,7 @@ export class LoadConfigEffects {
 
 	@Effect()
 	getConfigs$ = this.actions$
-		.ofType(ConfigActionTypes.GET_CONFIGS)
+		.ofType("sdfsdf")
 		.map(toPayload)
 		.switchMap((data: GetConfigsApiModel.Request) => this.configService.getConfigs())
 		.map((configs) => new ConfigLoadedSucceedAction(configs))
