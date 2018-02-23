@@ -10,24 +10,24 @@ import {
 	OnDestroy,
 	Output,
 	EventEmitter
-} from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs';
-import { IntervalObservable } from 'rxjs/observable/IntervalObservable';
-import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+} from "@angular/core";
+import { Observable } from "rxjs/Observable";
+import { Subscription } from "rxjs";
+import { IntervalObservable } from "rxjs/observable/IntervalObservable";
+import { HttpClient } from "@angular/common/http";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 
-import { AuthenticationModuleConfigComponent } from '../../dumb-components/authentication-module-config';
-import { ConfigAppConfigComponent } from '../../dumb-components/app-config';
-import { UserModuleConfigComponent } from '../../dumb-components/user-module-config';
-import { FormGroup } from '@angular/forms/src/model';
-import { PartialConfig } from '../../models';
-import { LayoutModuleConfigComponent } from '../../dumb-components';
+import { AuthenticationModuleConfigComponent } from "../../dumb-components/authentication-module-config";
+import { ConfigAppConfigComponent } from "../../dumb-components/app-config";
+import { UserModuleConfigComponent } from "../../dumb-components/user-module-config";
+import { FormGroup } from "@angular/forms/src/model";
+import { PartialConfig } from "../../models";
+import { LayoutModuleConfigComponent } from "../../dumb-components";
 
 @Component({
-	selector: 'dynamic-config-component-selector',
-	templateUrl: './dynamic-config-component-selector.component.html',
-	styleUrls: [ './dynamic-config-component-selector.component.scss' ],
+	selector: "dynamic-config-component-selector",
+	templateUrl: "./dynamic-config-component-selector.component.html",
+	styleUrls: [ "./dynamic-config-component-selector.component.scss" ],
 	entryComponents: [
 		AuthenticationModuleConfigComponent,
 		ConfigAppConfigComponent,
@@ -42,7 +42,7 @@ export class DynamicConfigComponentSelectorComponent implements AfterViewInit {
 		user_module_config: UserModuleConfigComponent,
 		layout_config: LayoutModuleConfigComponent
 	};
-	@ViewChild('dynamicComponentContainer', { read: ViewContainerRef })
+	@ViewChild("dynamicComponentContainer", { read: ViewContainerRef })
 	dynamicComponentContainer: ViewContainerRef;
 	@Output() configChanged = new EventEmitter();
 	currentComponent: any = null;
@@ -55,7 +55,7 @@ export class DynamicConfigComponentSelectorComponent implements AfterViewInit {
 		}
 		let _component: any = this.typeMapToDiagram[data.type];
 		let inputProviders = Object.keys(data.inputs).map((inputName) => {
-			return { provide: inputName, useValue: (data.inputs as any)[inputName]  };
+			return { provide: inputName, useValue: (data.inputs as any)[inputName] };
 		});
 		let resolvedInputs = ReflectiveInjector.resolve(inputProviders);
 

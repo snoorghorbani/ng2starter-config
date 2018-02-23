@@ -1,10 +1,11 @@
 import { createSelector, createFeatureSelector, MemoizedSelector } from '@ngrx/store';
 
 import * as configList from './config-list.reducer';
+import { ConfigLoadedFailedAction, ConfigLoadedSucceedAction, GetConfigAction } from '../actions';
 export interface ConfigState {
 	list: configList.State;
 }
-
+ConfigLoadedFailedAction;
 export const ConfigReducers = {
 	list: configList.Reducer
 };
@@ -28,3 +29,4 @@ export const getAuthenticationModuleConfig = createSelector(
 );
 export const getUserModuleConfig = createSelector(getConfigListState, configList.getUserModuleConfig);
 export const getlayoutModuleConfig = createSelector(getConfigListState, configList.getlayoutModuleConfig);
+export const getConfigModuleConfig = createSelector(getConfigListState, configList.getConfigModuleConfig);

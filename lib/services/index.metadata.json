@@ -1,1 +1,1 @@
-[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./config.service"}]}]
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./module-configuration"},{"from":"./config.service"}]}]

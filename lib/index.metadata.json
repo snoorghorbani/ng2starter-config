@@ -1,1 +1,1 @@
-[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./config.module"},{"from":"./reducers"},{"from":"./services"}]}]
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./config.module"},{"from":"./config.config"},{"from":"./reducers"},{"from":"./services"},{"from":"./models"}]}]
