@@ -1,6 +1,6 @@
 {
 	"name": "@soushians/config",
-	"version": "1.0.484",
+	"version": "2.0.0",
 	"description": "",
 	"main": "lib/index.js",
 	"typings": [ "./lib/index.d.ts" ],
@@ -15,11 +15,11 @@
 	},
 	"dependencies": {},
 	"peerDependencies": {
-		"@soushians/starter": "1.1.x"
+		"@soushians/starter": "2.x.x"
 	},
 	"devDependencies": {
-		"@soushians/infra": "^1.x.x",
-		"@soushians/shared": "^1.x.x",
+		"@soushians/infra": "^2.x.x",
+		"@soushians/shared": "^2.x.x",
 		"@ngrx/effects": "^4.x.x",
 		"@ngrx/router-store": "^4.x.x",
 		"@ngrx/store": "^4.x.x",
