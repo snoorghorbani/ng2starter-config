@@ -17,3 +17,4 @@ export declare const getAuthenticationModuleConfig: MemoizedSelector<object, any
 export declare const getUserModuleConfig: MemoizedSelector<object, any>;
 export declare const getlayoutModuleConfig: MemoizedSelector<object, any>;
 export declare const getConfigModuleConfig: MemoizedSelector<object, any>;
+export declare const getFormModuleConfig: MemoizedSelector<object, any>;

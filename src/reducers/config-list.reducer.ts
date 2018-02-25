@@ -30,3 +30,5 @@ export const getlayoutModuleConfig = (state: State) =>
 	state.data.find((config) => config.Name == 'layout_config') as any;
 export const getConfigModuleConfig = (state: State) =>
 	state.data.find((config) => config.Name == 'config_module_config') as any;
+export const getFormModuleConfig = (state: State) =>
+	state.data.find((config) => config.Name == 'form_module_config') as any;

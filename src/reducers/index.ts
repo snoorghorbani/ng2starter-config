@@ -30,3 +30,4 @@ export const getAuthenticationModuleConfig = createSelector(
 export const getUserModuleConfig = createSelector(getConfigListState, configList.getUserModuleConfig);
 export const getlayoutModuleConfig = createSelector(getConfigListState, configList.getlayoutModuleConfig);
 export const getConfigModuleConfig = createSelector(getConfigListState, configList.getConfigModuleConfig);
+export const getFormModuleConfig = createSelector(getConfigListState, configList.getFormModuleConfig);
