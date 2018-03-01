@@ -2,6 +2,7 @@
 	"name": "@soushians/config",
 	"version": "2.0.10",
 	"description": "",
+	"keywords": [ "Angular", "Starter", "MEAN", "MongoDB" ],
 	"main": "lib/index.js",
 	"typings": [ "./lib/index.d.ts" ],
 	"scripts": {
@@ -37,6 +38,16 @@
 		"type": "git",
 		"url": "https://github.com/snoorghorbani/ng2starter-config.git"
 	},
+	"contributors": [
+		{
+			"name": "nono khatiri",
+			"email": "nonokhatiri@yahoo.com"
+		},
+		{
+			"name": "pegah khavarifar",
+			"email": "pegah.khf@gmail.com"
+		}
+	],
 	"author": "soushians noorghorbani <snoorghorbani@gmail.com>",
 	"license": "MIT"
 }

@@ -1,7 +1,7 @@
 import { createSelector, createFeatureSelector, MemoizedSelector } from '@ngrx/store';
 
 import * as configList from './config-list.reducer';
-import { ConfigLoadedFailedAction, ConfigLoadedSucceedAction, GetConfigAction } from '../actions';
+import { ConfigLoadedFailedAction, ConfigLoadedSucceedAction } from '../actions';
 export interface ConfigState {
 	list: configList.State;
 }

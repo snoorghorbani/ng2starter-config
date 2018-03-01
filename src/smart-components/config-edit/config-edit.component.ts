@@ -30,7 +30,6 @@ export class ConfigEditComponent implements OnInit {
 					_id: data.Result._id,
 					Name: data.Result.Name
 				});
-				debugger;
 				Object.keys(data.Result.Config).forEach((key) => {
 					this.addControl(this.formGroup.controls.Config as FormGroup, key, data.Result.Config[key]);
 				});
