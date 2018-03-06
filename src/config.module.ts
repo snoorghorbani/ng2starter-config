@@ -1,11 +1,11 @@
-﻿import { NgModule, ModuleWithProviders } from '@angular/core';
-import { StoreModule } from '@ngrx/store';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+﻿import { NgModule, ModuleWithProviders } from "@angular/core";
+import { StoreModule } from "@ngrx/store";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
 	MatIconModule,
 	MatButtonModule,
@@ -22,30 +22,30 @@ import {
 	MatToolbarModule,
 	MatDatepickerModule,
 	MatProgressBarModule
-} from '@angular/material';
+} from "@angular/material";
 
-import { ConfigReducers } from './reducers';
+import { ConfigReducers } from "./reducers";
 import {
 	ConfigAppConfigComponent,
 	AuthenticationModuleConfigComponent,
 	UserModuleConfigComponent,
 	LayoutModuleConfigComponent
-} from './dumb-components';
-import { ConfigService, ConfigurationService } from './services';
+} from "./dumb-components";
+import { ConfigService, ConfigurationService } from "./services";
 import {
 	ConfigModuleContainerComponent,
 	ConfigsComponent,
 	ConfigEditComponent,
 	DynamicConfigComponentSelectorComponent
-} from './smart-components';
-import { RoutingModule } from './config.routing-module';
-import { GetConfigsApiModel } from './models';
-import { Observable } from 'rxjs/Observable';
-import * as FeatureReducer from './reducers';
-import { EffectsModule } from '@ngrx/effects';
+} from "./smart-components";
+import { RoutingModule } from "./config.routing-module";
+import { GetConfigsApiModel } from "./models";
+import { Observable } from "rxjs/Observable";
+import * as FeatureReducer from "./reducers";
+import { EffectsModule } from "@ngrx/effects";
 
-import { LoadConfigEffects } from './effects';
-import { ConfigModuleConfig, MODULE_CONFIG_TOKEN } from './config.config';
+import { LoadConfigEffects } from "./effects";
+import { ConfigModuleConfig, MODULE_CONFIG_TOKEN } from "./config.config";
 
 @NgModule({
 	imports: [
@@ -107,7 +107,7 @@ export class NgsConfigModule {
 @NgModule({
 	imports: [
 		NgsConfigModule,
-		StoreModule.forFeature('config', ConfigReducers),
+		StoreModule.forFeature("config", ConfigReducers),
 		EffectsModule.forFeature([ LoadConfigEffects ])
 		// RoutingModule
 	],

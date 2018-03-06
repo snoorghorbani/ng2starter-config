@@ -13,10 +13,15 @@ import { UtilityService } from "@soushians/infra";
 })
 export class UserModuleConfigComponent {
 	formGroup: FormGroup = new FormGroup({
-		changePassword: new FormControl("", [ Validators.required ]),
-		editProfile: new FormControl("", [ Validators.required ]),
-		getUserInfo: new FormControl("", [ Validators.required ]),
-		profileInformation: new FormControl("", [ Validators.required ])
+		endpoints: new FormGroup({
+			changePassword: new FormControl("", [ Validators.required ]),
+			editProfile: new FormControl("", [ Validators.required ]),
+			getUserInfo: new FormControl("", [ Validators.required ]),
+			profileInformation: new FormControl("", [ Validators.required ])
+		}),
+		forms: new FormGroup({
+			profile_edit: new FormControl("", [ Validators.required ])
+		})
 	});
 	@Input()
 	set configFormGroup(configFormGroup: FormGroup) {

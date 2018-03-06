@@ -1,4 +1,5 @@
-<div [formGroup]="formGroup.controls.endpoints">
+<h2>Endpoints</h2>
+<div [formGroup]="formGroup.controls.endpoints" fxLayout="column">
     <mat-form-field>
         <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="sign in" formControlName="signIn">
     </mat-form-field>
@@ -8,4 +9,11 @@
     <mat-form-field>
         <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="user information" formControlName="userInformation">
     </mat-form-field>
+</div>
+<h2>Forms</h2>
+<div [formGroup]="formGroup.controls.forms" fxLayout="column">
+    <mat-form-field>
+        <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="SignIn Forms" formControlName="signIn">
+    </mat-form-field>
+            <!-- <ngs-form-selector (select)="setFormId($event,'signIn')"></ngs-form-selector> -->
 </div>
