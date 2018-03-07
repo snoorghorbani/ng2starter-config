@@ -5,6 +5,8 @@ import { FormGroup, Validators, FormControl, FormArray } from "@angular/forms";
 	templateUrl: "./layout-module-config.component.html"
 })
 export class LayoutModuleConfigComponent {
+	sideNavModes: string[];
+	layoutModes: string[];
 	formGroup: FormGroup = new FormGroup({
 		layoutMode: new FormControl("", [ Validators.required ]),
 		showLeftNavBar: new FormControl("", [ Validators.required ]),
@@ -42,6 +44,8 @@ export class LayoutModuleConfigComponent {
 	roleItems: string[] = [ "Admin", "User" ];
 
 	constructor(private injector: Injector) {
+		this.sideNavModes = [ "over", "push", "side" ];
+		this.layoutModes = [ "with-margin", "without-margin", "default" ];
 		this.configFormGroup = this.injector.get("configFormGroup");
 	}
 	addMenu() {

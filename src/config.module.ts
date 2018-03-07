@@ -21,7 +21,8 @@ import {
 	MatInputModule,
 	MatToolbarModule,
 	MatDatepickerModule,
-	MatProgressBarModule
+	MatProgressBarModule,
+	MatSlideToggleModule
 } from "@angular/material";
 
 import { ConfigReducers } from "./reducers";
@@ -67,6 +68,7 @@ import { ConfigModuleConfig, MODULE_CONFIG_TOKEN } from "./config.config";
 		MatMenuModule,
 		MatRadioModule,
 		MatInputModule,
+		MatSlideToggleModule,
 		MatToolbarModule,
 		MatDatepickerModule,
 		MatProgressBarModule,

@@ -2,25 +2,23 @@
     <div fxFlex="100" fxFlexLayout="row">
         <div [formGroup]="formGroup">
             <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="layout mode" formControlName="layoutMode">
+                <mat-select (change)="configChanged.emit(formGroup.value)" placeholder="layout mode" formControlName="layoutMode" >
+                    <mat-option *ngFor="let item of layoutModes" [value]="item">{{item}}</mat-option>
+                </mat-select> 
             </mat-form-field>
+            <mat-slide-toggle  (change)="configChanged.emit(formGroup.value)"  formControlName="showLeftNavBar">show left navbar</mat-slide-toggle>
             <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="show left navbar" formControlName="showLeftNavBar">
+                <mat-select (change)="configChanged.emit(formGroup.value)" placeholder="main side nav mode" formControlName="mainSideNavMode" >
+                    <mat-option *ngFor="let item of sideNavModes" [value]="item">{{item}}</mat-option>
+                </mat-select> 
             </mat-form-field>
+            <mat-slide-toggle  (change)="configChanged.emit(formGroup.value)"  formControlName="showMainSidenav">show main side nav</mat-slide-toggle>
+            <mat-slide-toggle  (change)="configChanged.emit(formGroup.value)"  formControlName="stickyLeftNavBar">sticky left navbar</mat-slide-toggle>
+            <mat-slide-toggle  (change)="configChanged.emit(formGroup.value)"  formControlName="showSecondSideNav">show second side nav</mat-slide-toggle>
             <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="main side nav mode" formControlName="mainSideNavMode">
-            </mat-form-field>
-            <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="show main side nav" formControlName="showMainSidenav">
-            </mat-form-field>
-            <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="sticky left navbar" formControlName="stickyLeftNavBar">
-            </mat-form-field>
-            <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="show second side nav" formControlName="showSecondSideNav">
-            </mat-form-field>
-            <mat-form-field>
-                <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="second side nav mode" formControlName="secondSideNavMode">
+                <mat-select (change)="configChanged.emit(formGroup.value)" placeholder="second side nav mode" formControlName="secondSideNavMode" >
+                    <mat-option *ngFor="let item of sideNavModes" [value]="item">{{item}}</mat-option>
+                </mat-select> 
             </mat-form-field>
         </div>
     </div>

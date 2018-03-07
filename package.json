@@ -1,6 +1,6 @@
 {
 	"name": "@soushians/config",
-	"version": "2.0.15",
+	"version": "2.0.16",
 	"description": "",
 	"keywords": [ "Angular", "Starter", "MEAN", "MongoDB" ],
 	"main": "lib/index.js",
