@@ -62,7 +62,7 @@ export class ConfigService {
 		var model = new EditConfigApiModel.Request(body);
 
 		return this.http
-			.put(`http://localhost:3000/api/config/${model.Name}`, model.getRequestBody(), { withCredentials: false })
+			.put(`http://localhost:3000/api/config/${model.Name}`, model.getRequestBody())
 			.map((response) => response)
 			.catch((err) => {
 				return Observable.throw(err);

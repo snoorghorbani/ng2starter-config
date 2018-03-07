@@ -1,7 +1,7 @@
-import { createSelector, createFeatureSelector, MemoizedSelector } from '@ngrx/store';
+import { createSelector, createFeatureSelector, MemoizedSelector } from "@ngrx/store";
 
-import * as configList from './config-list.reducer';
-import { ConfigLoadedFailedAction, ConfigLoadedSucceedAction } from '../actions';
+import * as configList from "./config-list.reducer";
+import { ConfigLoadedFailedAction, ConfigLoadedSucceedAction } from "../actions";
 export interface ConfigState {
 	list: configList.State;
 }
@@ -11,12 +11,12 @@ export const ConfigReducers = {
 };
 
 export interface FeatureState {
-	'configs': ConfigState;
+	"configs": ConfigState;
 }
 
 //#region selectors
 
-export const selectConfigState = createFeatureSelector<ConfigState>('config');
+export const selectConfigState = createFeatureSelector<ConfigState>("config");
 
 //#endregion
 
@@ -31,3 +31,4 @@ export const getUserModuleConfig = createSelector(getConfigListState, configList
 export const getlayoutModuleConfig = createSelector(getConfigListState, configList.getlayoutModuleConfig);
 export const getConfigModuleConfig = createSelector(getConfigListState, configList.getConfigModuleConfig);
 export const getFormModuleConfig = createSelector(getConfigListState, configList.getFormModuleConfig);
+export const getSocketModuleConfig = createSelector(getConfigListState, configList.getSocketModuleConfig);

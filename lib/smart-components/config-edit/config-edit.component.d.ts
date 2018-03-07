@@ -1,8 +1,8 @@
-import { OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { PartialConfig } from '../../models';
-import { ConfigService } from '../../services';
+import { OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { FormGroup, FormBuilder } from "@angular/forms";
+import { PartialConfig } from "../../models";
+import { ConfigService } from "../../services";
 export declare class ConfigEditComponent implements OnInit {
     private configService;
     private formBuilder;

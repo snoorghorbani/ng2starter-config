@@ -13,34 +13,46 @@ export class LayoutModuleConfigComponent {
 		stickyLeftNavBar: new FormControl("", [ Validators.required ]),
 		showSecondSideNav: new FormControl("", [ Validators.required ]),
 		secondSideNavMode: new FormControl("", [ Validators.required ]),
-		mainSideNavItems: new FormArray([])
+		menuItems: new FormArray([])
 	});
+	_configFormGroup: FormGroup;
 	@Input()
 	set configFormGroup(configFormGroup: FormGroup) {
-		(configFormGroup.controls.mainSideNavItems as FormArray).controls.forEach((control) => {
-			debugger;
-			(this.formGroup.controls.mainSideNavItems as FormArray).push(
+		this._configFormGroup = configFormGroup;
+		(configFormGroup.controls.menuItems as FormArray).controls.forEach((control) => {
+			(this.formGroup.controls.menuItems as FormArray).push(
 				new FormGroup({
 					route: new FormControl("", [ Validators.required ]),
 					icon: new FormControl("", [ Validators.required ]),
 					// roles: new FormArray(control.value.roles.map((i) => new FormControl("Admin"))),
-					roles: new FormArray([ new FormControl("Admin") ]),
+					roles: new FormControl(),
 					title: new FormControl("", [ Validators.required ])
 				})
 			);
 		});
-		debugger;
-		this.formGroup.patchValue(configFormGroup.value);
-		configFormGroup.valueChanges.subscribe((data) => {
-			this.formGroup.patchValue(data);
-		});
-	}
 
+		this.formGroup.patchValue(configFormGroup.value);
+		configFormGroup.valueChanges.subscribe((data) => this.formGroup.patchValue(data));
+	}
+	get configFormGroup() {
+		return this._configFormGroup;
+	}
 	@Output() configChanged = new EventEmitter();
 
 	roleItems: string[] = [ "Admin", "User" ];
 
 	constructor(private injector: Injector) {
 		this.configFormGroup = this.injector.get("configFormGroup");
+	}
+	addMenu() {
+		var menuItem = new FormGroup({
+			route: new FormControl("", [ Validators.required ]),
+			icon: new FormControl("", [ Validators.required ]),
+			roles: new FormControl(),
+			title: new FormControl("", [ Validators.required ])
+		});
+
+		(this.formGroup.get("menuItems") as FormArray).push(menuItem);
+		(this.configFormGroup.get("menuItems") as FormArray).push(menuItem);
 	}
 }

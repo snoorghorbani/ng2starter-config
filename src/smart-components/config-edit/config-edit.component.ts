@@ -1,15 +1,15 @@
-import { NgModule, Component, OnInit, Output, EventEmitter, Input, ViewChild, ViewContainerRef } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { NgModule, Component, OnInit, Output, EventEmitter, Input, ViewChild, ViewContainerRef } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { ActivatedRoute } from "@angular/router";
+import { FormGroup, FormBuilder, FormControl } from "@angular/forms";
 
-import { EditConfigApiModel, PartialConfig } from '../../models';
-import { UtilityService } from '@soushians/infra';
-import { ConfigService } from '../../services';
+import { EditConfigApiModel, PartialConfig } from "../../models";
+import { UtilityService } from "@soushians/infra";
+import { ConfigService } from "../../services";
 
 @Component({
-	selector: 'config-config-edit',
-	templateUrl: './config-edit.component.html'
+	selector: "config-config-edit",
+	templateUrl: "./config-edit.component.html"
 })
 export class ConfigEditComponent implements OnInit {
 	configInforamation: any;
@@ -18,7 +18,7 @@ export class ConfigEditComponent implements OnInit {
 
 	constructor(private configService: ConfigService, private formBuilder: FormBuilder, private route: ActivatedRoute) {
 		this.route.params.subscribe((params) => {
-			const configName: string = params['name'];
+			const configName: string = params["name"];
 			this.configService.getConfigByName(configName).subscribe((data) => {
 				this.partialConfigModel = {
 					type: data.Result.Name,
@@ -55,6 +55,8 @@ export class ConfigEditComponent implements OnInit {
 	edit() {
 		debugger;
 		if (!this.formGroup.valid) return;
-		this.configService.editConfig(this.formGroup.value);
+		this.configService.editConfig(this.formGroup.value).subscribe((config) => {
+			debugger;
+		});
 	}
 }
