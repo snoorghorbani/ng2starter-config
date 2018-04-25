@@ -7,7 +7,7 @@ import { FormGroup, Validators, FormControl, FormArray } from "@angular/forms";
 export class LayoutModuleConfigComponent {
 	sideNavModes: string[];
 	layoutModes: string[];
-	formGroup: FormGroup = new FormGroup({
+	formGroup: any = new FormGroup({
 		layoutMode: new FormControl("", [ Validators.required ]),
 		showLeftNavBar: new FormControl("", [ Validators.required ]),
 		mainSideNavMode: new FormControl("", [ Validators.required ]),

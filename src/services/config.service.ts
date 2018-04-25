@@ -11,30 +11,32 @@ import { Store } from "@ngrx/store";
 import { IntervalObservable } from "rxjs/observable/IntervalObservable";
 import { GetConfigAction } from "../actions";
 import { ConfigurationService } from "./module-configuration";
-import {} from "../../";
+import { } from "../../";
 declare var _: any;
 
 @Injectable()
 export class ConfigService {
 	responseCache: any;
+	configsEndpoint: string;
 
 	constructor(
 		private http: HttpClient,
 		private store: Store<ConfigState>,
 		private configurationService: ConfigurationService
 	) {
+		this.configsEndpoint = this.configurationService.config.env.production
+			? this.configurationService.config.prod_api_host
+			: this.configurationService.config.dev_api_host;
+
 		setTimeout(() => {
 			this.store.dispatch(new GetConfigAction());
 		}, 999);
 	}
 
 	getConfigs(): Observable<ConfigModel<any>[]> {
-		const configsEndpoint = this.configurationService.config.env.production
-			? this.configurationService.config.prod_api_host
-			: this.configurationService.config.dev_api_host;
 		return (
 			this.http
-				.get(`${configsEndpoint}/api/config`)
+				.get(`${this.configsEndpoint}/api/config`)
 				// .filter(() => this.configurationService.config.dev_api_host != undefined)
 				.take(1)
 				.map((response: GetConfigsApiModel.Response) => {
@@ -54,7 +56,7 @@ export class ConfigService {
 		);
 	}
 	getConfigByName(name: string): Observable<any> {
-		return this.http.get(`http://localhost:3000/api/config/${name}`).map((response) => response).catch((err) => {
+		return this.http.get(`${this.configsEndpoint}/api/config/${name}`).map((response) => response).catch((err) => {
 			return Observable.throw(err);
 		});
 	}
@@ -62,7 +64,7 @@ export class ConfigService {
 		var model = new EditConfigApiModel.Request(body);
 
 		return this.http
-			.put(`http://localhost:3000/api/config/${model.Name}`, model.getRequestBody())
+			.put(`${this.configsEndpoint}/api/config/${model.Name}`, model.getRequestBody())
 			.map((response) => response)
 			.catch((err) => {
 				return Observable.throw(err);
@@ -71,7 +73,7 @@ export class ConfigService {
 
 	getLayoutConfigs(): Observable<LayoutConfigModel[]> {
 		return this.http
-			.get("http://localhost:3000/api/layout-config")
+			.get(`${this.configsEndpoint}/api/layout-config`)
 			.map((response: LayoutConfigModel) => response)
 			.catch((err) => {
 				return Observable.throw(err);

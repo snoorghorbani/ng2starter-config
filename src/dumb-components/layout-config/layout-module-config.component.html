@@ -29,7 +29,7 @@
             <mat-icon aria-label="icon-button icon">add</mat-icon>
         </button>
     </h2>
-    <div fxFlex="100" *ngFor="let item of formGroup.get('menuItems').controls">
+    <div fxFlex="100" *ngFor="let item of formGroup.controls.menuItems.controls">
         <div [formGroup]="item">
             <mat-form-field>
                 <input type="text" (change)="configChanged.emit(formGroup.value)" matInput placeholder="route" formControlName="route">

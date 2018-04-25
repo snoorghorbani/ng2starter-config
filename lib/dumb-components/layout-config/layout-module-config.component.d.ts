@@ -4,7 +4,7 @@ export declare class LayoutModuleConfigComponent {
     private injector;
     sideNavModes: string[];
     layoutModes: string[];
-    formGroup: FormGroup;
+    formGroup: any;
     _configFormGroup: FormGroup;
     configFormGroup: FormGroup;
     configChanged: EventEmitter<{}>;
