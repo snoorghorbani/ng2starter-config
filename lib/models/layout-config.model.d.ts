@@ -3,7 +3,7 @@ export interface LayoutConfigModel {
     showSecondSideNav: boolean;
     secondSideNavMode: "over" | "push" | "side";
     mainSideNavMode: "over" | "push" | "side";
-    mainSideNavItems: {
+    menuItems: {
         route: string;
         icon: string;
         roles: string[];
